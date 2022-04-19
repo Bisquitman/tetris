@@ -25,7 +25,7 @@ const game = {
     ['x', 'o', 'o', 'x', 'x', 'o', 'x', 'o', 'x', 'x'],
   ],
 
-  activeTetromino: {
+  activeTetramino: {
     x: 3,
     y: 0,
     block: [
@@ -36,28 +36,28 @@ const game = {
   },
 
   moveLeft() {
-    this.activeTetromino.x -= 1;
+    this.activeTetramino.x -= 1;
   },
 
   moveRight() {
-    this.activeTetromino.x += 1;
+    this.activeTetramino.x += 1;
   },
 
   moveDown() {
-    this.activeTetromino.y += 1;
+    this.activeTetramino.y += 1;
   },
 
-  rotateTetromino() { },
+  rotateTetramino() { },
 
   get viewArea() {
     const area = JSON.parse(JSON.stringify(this.area));
-    const { x, y, block: tetromino } = this.activeTetromino;
+    const { x, y, block: tetramino } = this.activeTetramino;
 
-    for (let i = 0; i < tetromino.length; i++) {
-      const row = tetromino[i];
+    for (let i = 0; i < tetramino.length; i++) {
+      const row = tetramino[i];
       for (let j = 0; j < row.length; j++) {
         if (row[j] === 'x') {
-          area[y + i][x + j] = tetromino[i][j];
+          area[y + i][x + j] = tetramino[i][j];
         }
       }
     }
