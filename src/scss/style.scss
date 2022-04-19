@@ -1,0 +1,17 @@
+@import "normalize";
+
+@include normalize();
+
+@import "variables";
+@import "default";
+
+.title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+
+  span {
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+}

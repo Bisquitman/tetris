@@ -1,0 +1,36 @@
+// Цвета
+$primary: #3f484d;
+$bg-color: #F4F0E9;
+
+// Медиа-запросы
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+// Шрифты
+@mixin font($name, $weight) {
+  @font-face {
+    font: {
+      family: $name;
+      weight: $weight;
+      display: swap;
+    }
+
+    src: url("../assets/fonts/#{ $name }-#{ $weight }.woff2") format("woff2"),
+    url("../assets/fonts/#{ $name }-#{ $weight }.woff") format("woff");
+  }
+}
