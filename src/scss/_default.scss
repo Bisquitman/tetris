@@ -10,12 +10,12 @@ html {
   box-sizing: inherit;
 }
 
-$font-family: sans-serif;
+$font-family: 'tetris',
+sans-serif;
 
 body {
-  min-height: 100vh;
+  min-height: 100%;
   font-family: $font-family;
-  /* указать шрифт под проект*/
   color: $primary;
   line-height: 1.3;
   background-color: $bg-color;
@@ -58,6 +58,10 @@ h3,
 p,
 figure {
   margin: 0;
+}
+
+h1 {
+  font-family: $font-family;
 }
 
 fieldset {

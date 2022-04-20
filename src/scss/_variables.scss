@@ -20,17 +20,3 @@ $bg-color: #F4F0E9;
     @content;
   }
 }
-
-// Шрифты
-@mixin font($name, $weight) {
-  @font-face {
-    font: {
-      family: $name;
-      weight: $weight;
-      display: swap;
-    }
-
-    src: url("../assets/fonts/#{ $name }-#{ $weight }.woff2") format("woff2"),
-    url("../assets/fonts/#{ $name }-#{ $weight }.woff") format("woff");
-  }
-}

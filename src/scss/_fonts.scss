@@ -1,3 +1,10 @@
-@include font('montserrat', 700);
-@include font('montserrat', 500);
-@include font('montserrat', 400);
+// Шрифты
+@font-face {
+  font-family: 'Tetris';
+  src: url('../assets/fonts/Tetris.woff2') format('woff2'),
+    url('../assets/fonts/Tetris.woff') format('woff'),
+    url('../assets/fonts/Tetris.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
