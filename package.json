@@ -1,12 +1,13 @@
 {
-  "name": "online-library-1984",
+  "name": "tetris",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "build": "gulp build",
     "start": "gulp",
-    "clear": "gulp clear"
+    "clear": "gulp clear",
+    "gh-deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
   "author": "",

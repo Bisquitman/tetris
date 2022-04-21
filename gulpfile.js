@@ -138,8 +138,8 @@ export const js = () => gulp
       title: "JS",
       message: "Error: <%= error.message %>"
     })))
-  .pipe(gulpIf(dev, gulp.dest(path.dist.js)))
   .pipe(webpack(configWebpack))
+  .pipe(gulpIf(dev, gulp.dest(path.dist.js)))
   .pipe(terser())
   .pipe(rename({ suffix: '.min' }))
   .pipe(gulp.dest(path.dist.js))
