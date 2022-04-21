@@ -6,8 +6,7 @@
   "scripts": {
     "build": "gulp build",
     "start": "gulp",
-    "clear": "gulp clear",
-    "gh-deploy": "git subtree push --prefix dist origin gh-pages"
+    "clear": "gulp clear"
   },
   "keywords": [],
   "author": "",
