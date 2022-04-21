@@ -10,4 +10,4 @@ const game = new Game();
 const view = new View(document.querySelector('.container'));
 const controller = new Controller(game, view);
 
-controller.init('Enter', 'Space');
+controller.init(['Enter', 'Space']);

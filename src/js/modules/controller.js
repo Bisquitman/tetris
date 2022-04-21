@@ -4,9 +4,9 @@ export class Controller {
     this.view = view;
   }
 
-  init(keyCode1, keyCode2) {
+  init(keyCode) {
     window.addEventListener('keydown', (event) => {
-      if (event.code === keyCode1 || event.code === keyCode2) {
+      if (keyCode.includes(event.code)) {
         this.view.init();
         this.start();
       }
