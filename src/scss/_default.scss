@@ -15,7 +15,7 @@ sans-serif;
 
 body {
   min-height: 100%;
-  font-family: $font-family;
+  font-family: sans-serif;
   color: $primary;
   line-height: 1.3;
   background-color: $bg-color;
@@ -101,6 +101,12 @@ iframe {
 .container {
   max-width: 500px;
   margin: 0 auto;
+  display: grid;
+  // gap: 50px;
+  // align-items: flex-start;
+  grid-template-areas:
+    'game score'
+    'game next';
   // padding: 0 20px;
 
   // @include tablet {
@@ -110,6 +116,9 @@ iframe {
   // @include laptop {
   //   padding: 0 45px;
   // }
+  >* {
+    align-self: flex-start;
+  }
 }
 
 .hide,
@@ -127,8 +136,16 @@ section {
 }
 
 .game-area {
+  grid-area: game;
   border: solid #000;
   border-width: 0px 2px 3px 2px;
   display: block;
-  // margin: 0 auto;
+}
+
+.score {
+  grid-area: score;
+}
+
+.next {
+  grid-area: next;
 }
